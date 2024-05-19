@@ -16,11 +16,27 @@ public:
 	friend istream& operator >>(istream& in, Complex& c);           // Input
 	friend ostream& operator <<(ostream& out, const Complex& c);    // Output
 private:
-
+	double real;
+	double imaginary;
 };
 
 int main() {                                // Test program
+	Complex a(3, 4);
+	Complex b(1, 2);
 
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl << endl;
+
+	cout << "a == b: " << (a == b) << endl;
+	cout << "a + b: " << a + b << endl;
+	cout << "a - b: " << a - b << endl;
+	cout << "a * b: " << a * b << endl << endl;
+
+	Complex c;
+	cin >> c;
+	cout << "You entered: " << c << endl;
+
+	system("pause");
 	return 0;
 }
 
